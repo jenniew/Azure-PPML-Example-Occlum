@@ -160,6 +160,9 @@ build_spark() {
     cp -f $BIGDL_HOME/jars/* image/bin/jars
     cp -rf /opt/spark-source image/opt/
 
+    # Copy nytaxi example
+    cp /root/spark-simple-query-1.0-SNAPSHOT.jar image/bin/jars/
+
     cd ${INSTANCE_DIR}
     cp -f $INIT_DIR/target/release/init initfs/bin
     cp -rf image/lib64 initfs/lib64 
